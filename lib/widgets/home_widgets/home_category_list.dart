@@ -9,21 +9,20 @@ class HomeCategoryList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: size.height * .125,
+      height: size.height * .15,
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
           children: List.generate(
             5,
             (i) => Container(
-              clipBehavior: Clip.none,
               width: 100,
-              margin: const EdgeInsets.only(right: 10),
+              margin: const EdgeInsets.only(right: 10, bottom: 10, top: 10),
               padding: const EdgeInsets.all(5),
               decoration: BoxDecoration(
                 color: cardPrimaryColor,
                 borderRadius: BorderRadius.circular(12),
-                boxShadow: boxShadow,
+                border: Border.all(color: Colors.black12, width: .35),
               ),
               child: Column(
                 children: [
@@ -32,7 +31,7 @@ class HomeCategoryList extends StatelessWidget {
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
-                        color: Colors.grey[200],
+                        color: Colors.grey[100],
                       ),
                       child: Image.asset(categoryImg, fit: BoxFit.contain),
                     ),
