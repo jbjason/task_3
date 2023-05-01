@@ -16,17 +16,21 @@ const groups = [
   Group(title: 'Shop', img: 'assets/icons/group4.png'),
 ];
 
-const category = 'assets/icons/category.png';
+const categoryImg = 'assets/icons/category.png';
 
 final boxShadow = [
   BoxShadow(
     color: Colors.grey[400]!,
     blurRadius: 20,
-    offset: const Offset(0, 4),
+    offset: const Offset(0, 3),
   ),
   const BoxShadow(
     color: Colors.white,
     blurRadius: 20,
-    offset: Offset(0, -5),
+    offset: Offset(0, -3),
   ),
 ];
+
+const demoDetailText = """Free unlimited consultation with our panel doctor
+Up to 15% discount on Home Diagnostic sample collection
+ \$15000 dicount on health & life insurance.""";
