@@ -3,7 +3,6 @@ import 'package:task_3/constants/constants3.dart';
 
 class HomeCategoryList extends StatelessWidget {
   const HomeCategoryList({super.key, required this.size});
-
   final Size size;
 
   @override
