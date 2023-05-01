@@ -16,6 +16,13 @@ const groups = [
   Group(title: 'Shop', img: 'assets/icons/group4.png'),
 ];
 
+const navItems = [
+  'assets/icons/nav1.png',
+  'assets/icons/nav2.png',
+  'assets/icons/nav3.png',
+  'assets/icons/nav4.png',
+];
+
 const categoryImg = 'assets/icons/category.png';
 
 final boxShadow = [
