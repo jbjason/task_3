@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_3/constants/constants3.dart';
+import 'package:task_3/constants/constant.dart';
 
 class HomeDemoCard extends StatelessWidget {
   const HomeDemoCard({super.key, required this.size});

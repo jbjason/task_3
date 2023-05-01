@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_3/constants/constants3.dart';
+import 'package:task_3/constants/constant.dart';
 import 'package:task_3/widgets/home_widgets/home_painter.dart';
 
 class HomeCircularProgress extends StatelessWidget {

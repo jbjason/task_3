@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_3/constants/constants3.dart';
+import 'package:task_3/constants/constant.dart';
 import 'package:task_3/widgets/home_widgets/home_body_bottom.dart';
 import 'package:task_3/widgets/home_widgets/home_body_top.dart';
 import 'package:task_3/widgets/home_widgets/home_navbar.dart';

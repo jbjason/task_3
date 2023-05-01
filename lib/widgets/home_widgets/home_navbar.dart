@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_3/constants/constants3.dart';
+import 'package:task_3/constants/constant.dart';
 
 class HomeNavBar extends StatelessWidget {
   const HomeNavBar({super.key, required this.selected});
