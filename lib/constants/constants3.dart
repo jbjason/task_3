@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_3/models/group.dart';
 
 const backColor = Color(0xFFF8F8F8);
 const secondaryColor = Color(0xFFF05A76);
@@ -9,10 +10,23 @@ const textPrimaryColor = Colors.black;
 const textSecondaryColor = Colors.black38;
 
 const groups = [
-  'assets/icons/group1.png',
-  'assets/icons/group2.png',
-  'assets/icons/group3.png',
-  'assets/icons/group4.png',
+  Group(title: 'Cycle', img: 'assets/icons/group1.png'),
+  Group(title: 'My Health', img: 'assets/icons/group2.png'),
+  Group(title: 'Meditation', img: 'assets/icons/group3.png'),
+  Group(title: 'Shop', img: 'assets/icons/group4.png'),
 ];
 
 const category = 'assets/icons/category.png';
+
+final boxShadow = [
+  BoxShadow(
+    color: Colors.grey[400]!,
+    blurRadius: 20,
+    offset: const Offset(0, 4),
+  ),
+  const BoxShadow(
+    color: Colors.white,
+    blurRadius: 20,
+    offset: Offset(0, -5),
+  ),
+];
