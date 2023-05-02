@@ -48,8 +48,10 @@ class DetailsViewButton extends StatelessWidget {
         ),
         child: Row(
           children: [
+            // polygon icon
             getBoxButton('assets/icons/polygon1.png'),
             const SizedBox(width: 15),
+            // view... text
             const Text(
               'VIEW ALL SELECTED ITEMS',
               style: TextStyle(color: textSecondaryColor),
