@@ -29,17 +29,21 @@ class DetailsSymptomListItem extends StatelessWidget {
           children: [
             // image with borders
             Container(
-              height: 40,
+              height: 43,
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: Colors.white,
-                border: Border.all(color: secondaryColor),
+                color: fetchList[group].subSymptoms[item].isSelct
+                    ? secondaryColor
+                    : Colors.white,
+                border: Border.all(color: secondaryColor, width: 1.3),
               ),
               child: Image.network(
                 fetchList[group].subSymptoms[item].icon,
                 fit: BoxFit.contain,
-                color: Colors.grey[400],
+                color: fetchList[group].subSymptoms[item].isSelct
+                    ? Colors.white
+                    : Colors.grey[400],
               ),
             ),
             const SizedBox(height: 6),

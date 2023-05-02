@@ -12,8 +12,8 @@ const textSecondaryColor = Colors.black38;
 const groups = [
   Group(title: 'Cycle', img: 'assets/icons/group1.png'),
   Group(title: 'My Health', img: 'assets/icons/group2.png'),
-  Group(title: 'Meditation', img: 'assets/icons/group3.png'),
   Group(title: 'Shop', img: 'assets/icons/group4.png'),
+  Group(title: 'Meditation', img: 'assets/icons/group3.png'),
 ];
 
 const navItems = [

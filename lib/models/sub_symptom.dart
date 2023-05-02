@@ -2,21 +2,25 @@ class SubSymptom {
   final String id;
   final String title;
   final String icon;
-  const SubSymptom({
+  bool isSelct;
+  SubSymptom({
     required this.id,
     required this.title,
     required this.icon,
+    this.isSelct = false,
   });
 
   SubSymptom copyWith({
     String? id,
     String? title,
     String? icon,
+    bool? isSelct,
   }) {
     return SubSymptom(
       id: id ?? this.id,
       title: title ?? this.title,
       icon: icon ?? this.icon,
+      isSelct: isSelct ?? this.isSelct,
     );
   }
 
@@ -25,10 +29,11 @@ class SubSymptom {
       'id': id,
       'title': title,
       'icon': icon,
+      'isSelct': isSelct,
     };
   }
 
-  factory SubSymptom.fromMap(dynamic map) {
+  factory SubSymptom.fromMap(Map<String, dynamic> map) {
     return SubSymptom(
       id: map['id'].toString(),
       title: map['title'].toString(),

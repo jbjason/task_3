@@ -19,8 +19,7 @@ class DetailsSymptomList extends StatelessWidget {
           if (snapshot.hasError) {
             return const Center(child: Text('Error Occurs'));
           } else {
-            final fetchList =
-                Provider.of<Symptoms>(context, listen: false).symptomsList;
+            final fetchList = Provider.of<Symptoms>(context).symptomsList;
             return Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -62,8 +61,10 @@ class DetailsSymptomList extends StatelessWidget {
             fetchList: fetchList,
             group: group,
             item: index,
-            onTap: () => Provider.of<Symptoms>(context, listen: false)
-                .addSymtomp(group, index),
+            onTap: () {
+              Provider.of<Symptoms>(context, listen: false)
+                  .addSymtomp(group, index);
+            },
           ),
         ),
       ),
