@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task_3/constants/constant.dart';
-import 'package:task_3/widgets/home_widgets/home_circular_progress.dart';
+import 'package:task_3/widgets/home_widgets/home_body_top/home_date_picker.dart';
+import 'package:task_3/widgets/home_widgets/home_body_top/home_circular_progress.dart';
 
 class HomeProgessCard extends StatelessWidget {
   const HomeProgessCard({super.key, required this.size});
@@ -9,6 +10,7 @@ class HomeProgessCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double height = size.width > 400 ? 400 : size.width;
+    final selectedDate = ValueNotifier<int>(DateTime.now().day - 1);
     return Container(
       decoration: BoxDecoration(
         color: backColor,
@@ -17,15 +19,17 @@ class HomeProgessCard extends StatelessWidget {
       ),
       child: Column(
         children: [
+          // date picker
           Container(
-            height: size.height * .095,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              boxShadow: boxShadow,
-            ),
+            height: size.height * .12,
+            decoration:
+                BoxDecoration(color: Colors.white, boxShadow: boxShadow),
+            child: HomeDatePicker(selectedDate: selectedDate),
           ),
           const SizedBox(height: 20),
-          HomeCircularProgress(height: height),
+          // circular progress
+          HomeCircularProgress(height: height, selectedDate: selectedDate),
+          // drick tea text
           Center(
             child: Container(
               padding: const EdgeInsets.all(10),

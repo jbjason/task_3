@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task_3/constants/constant.dart';
-import 'package:task_3/widgets/home_widgets/home_body_bottom.dart';
-import 'package:task_3/widgets/home_widgets/home_body_top.dart';
+import 'package:task_3/widgets/home_widgets/home_body_bottom/home_body_bottom.dart';
+import 'package:task_3/widgets/home_widgets/home_body_top/home_body_top.dart';
 import 'package:task_3/widgets/home_widgets/home_navbar.dart';
 import 'package:task_3/widgets/home_widgets/home_offer_list.dart';
 
@@ -26,11 +26,14 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: const [
+              // group list,date & circular progress,image counter
+              // category list,symptom card list
               HomeBodyTop(),
               SizedBox(height: 30),
               // offer img
               HomeOfferList(),
               SizedBox(height: 30),
+              // demo-app Card,premium card list,add partner card
               HomeBodyBottom(),
               SizedBox(height: 15),
             ],

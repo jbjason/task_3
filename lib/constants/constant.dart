@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:task_3/models/group.dart';
-import 'package:task_3/models/symptom.dart';
 
 const backColor = Color(0xFFF8F8F8);
 const secondaryColor = Color(0xFFF05A76);
@@ -42,53 +41,3 @@ final boxShadow = [
 const demoDetailText = """Free unlimited consultation with our panel doctor
 Up to 15% discount on Home Diagnostic sample collection
  \$15000 dicount on health & life insurance.""";
-
-final symptomsList = [
-  Symptom(
-    id: '1',
-    title: 'Head',
-    subSymptoms: [
-      const SubSymptom(
-        id: '1',
-        icon: "https://img.icons8.com/?size=512\u0026id=53377\u0026format=png",
-        title: "Headache",
-      ),
-      const SubSymptom(
-        id: '2',
-        icon: "https://img.icons8.com/?size=512\u0026id=53377\u0026format=png",
-        title: "Migrane",
-      ),
-      const SubSymptom(
-        id: '3',
-        icon: "https://img.icons8.com/?size=512\u0026id=53377\u0026format=png",
-        title: "Dizziness",
-      ),
-      const SubSymptom(
-        id: '4',
-        icon: "https://img.icons8.com/?size=512\u0026id=53377\u0026format=png",
-        title: " Synus",
-      ),
-    ],
-  ),
-  Symptom(
-    id: '2',
-    title: 'Abdomen',
-    subSymptoms: [
-      const SubSymptom(
-        id: '1',
-        icon: "https://img.icons8.com/?size=512\u0026id=1800\u0026format=png",
-        title: "Bloating",
-      ),
-      const SubSymptom(
-        id: '2',
-        icon: "https://img.icons8.com/?size=512\u0026id=1800\u0026format=png",
-        title: "Constipation",
-      ),
-      const SubSymptom(
-        id: '3',
-        icon: "https://img.icons8.com/?size=512\u0026id=1800\u0026format=png",
-        title: "Diarrhea",
-      ),
-    ],
-  ),
-];

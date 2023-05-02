@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:task_3/constants/constant.dart';
-import 'package:task_3/widgets/home_widgets/home_demo_card.dart';
-import 'package:task_3/widgets/home_widgets/home_partner_card.dart';
-import 'package:task_3/widgets/home_widgets/home_premium_list.dart';
+import 'package:task_3/widgets/home_widgets/home_body_bottom/home_demo_card.dart';
+import 'package:task_3/widgets/home_widgets/home_body_bottom/home_partner_card.dart';
+import 'package:task_3/widgets/home_widgets/home_body_bottom/home_premium_list.dart';
 
 class HomeBodyBottom extends StatelessWidget {
   const HomeBodyBottom({super.key});

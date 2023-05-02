@@ -11,3 +11,5 @@ Container getBoxButton(String img) => Container(
       ),
       child: Image.asset(img, fit: BoxFit.contain),
     );
+
+const weeks = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];

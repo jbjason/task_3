@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:task_3/constants/constant.dart';
-import 'package:task_3/widgets/home_widgets/home_progress_card.dart';
-import 'package:task_3/widgets/home_widgets/home_symptom_card.dart';
-import 'package:task_3/widgets/home_widgets/home_group.dart';
-import 'package:task_3/widgets/home_widgets/home_category_list.dart';
+import 'package:task_3/widgets/home_widgets/home_body_top/home_progress_card.dart';
+import 'package:task_3/widgets/home_widgets/home_body_top/home_symptom_card.dart';
+import 'package:task_3/widgets/home_widgets/home_body_top/home_group.dart';
+import 'package:task_3/widgets/home_widgets/home_body_top/home_category_list.dart';
 
 class HomeBodyTop extends StatelessWidget {
   const HomeBodyTop({super.key});

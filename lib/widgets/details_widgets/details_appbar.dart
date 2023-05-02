@@ -13,7 +13,10 @@ class DetailsAppbar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         // back button
-        getBoxButton('assets/icons/polygon2.png'),
+        InkWell(
+          onTap: () => Navigator.pop(context),
+          child: getBoxButton('assets/icons/polygon2.png'),
+        ),
         // title
         Text(
           title,

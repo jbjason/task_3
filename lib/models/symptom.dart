@@ -28,15 +28,13 @@ class Symptom {
     };
   }
 
-  factory Symptom.fromMap(Map<String, dynamic> map) {
+  factory Symptom.fromMap(dynamic map) {
     return Symptom(
-      id: map['id'] as String,
-      title: map['title'] as String,
-      subSymptoms: List<SubSymptom>.from(
-        (map['subSymptoms'] as List<int>).map<SubSymptom>(
-          (x) => SubSymptom.fromMap(x as Map<String, dynamic>),
-        ),
-      ),
+      id: map['id'].toString(),
+      title: map['title'].toString(),
+      subSymptoms: (map['sub_symptom'] as List)
+          .map((e) => SubSymptom.fromMap(e))
+          .toList(),
     );
   }
 }
@@ -71,11 +69,11 @@ class SubSymptom {
     };
   }
 
-  factory SubSymptom.fromMap(Map<String, dynamic> map) {
+  factory SubSymptom.fromMap(dynamic map) {
     return SubSymptom(
-      id: map['id'] as String,
-      title: map['title'] as String,
-      icon: map['icon'] as String,
+      id: map['id'].toString(),
+      title: map['title'].toString(),
+      icon: map['icon'].toString(),
     );
   }
 }
