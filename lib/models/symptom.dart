@@ -1,3 +1,5 @@
+import 'package:task_3/models/sub_symptom.dart';
+
 class Symptom {
   final String id;
   final String title;
@@ -35,45 +37,6 @@ class Symptom {
       subSymptoms: (map['sub_symptom'] as List)
           .map((e) => SubSymptom.fromMap(e))
           .toList(),
-    );
-  }
-}
-
-class SubSymptom {
-  final String id;
-  final String title;
-  final String icon;
-  const SubSymptom({
-    required this.id,
-    required this.title,
-    required this.icon,
-  });
-
-  SubSymptom copyWith({
-    String? id,
-    String? title,
-    String? icon,
-  }) {
-    return SubSymptom(
-      id: id ?? this.id,
-      title: title ?? this.title,
-      icon: icon ?? this.icon,
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return <String, dynamic>{
-      'id': id,
-      'title': title,
-      'icon': icon,
-    };
-  }
-
-  factory SubSymptom.fromMap(dynamic map) {
-    return SubSymptom(
-      id: map['id'].toString(),
-      title: map['title'].toString(),
-      icon: map['icon'].toString(),
     );
   }
 }

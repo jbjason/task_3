@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:task_3/constants/constant.dart';
+import 'package:task_3/models/symptom.dart';
 import 'package:task_3/providers/symptoms.dart';
 import 'package:task_3/widgets/details_widgets/details_symptom_listitem.dart';
 
@@ -37,7 +38,8 @@ class DetailsSymptomList extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 10),
-                      DetailsSymptomListItem(fetchList: fetchList, i: i),
+                      // symtom img & title
+                      _symptomList(context, fetchList, i),
                       const SizedBox(height: 15),
                     ],
                   ),
@@ -46,6 +48,25 @@ class DetailsSymptomList extends StatelessWidget {
           }
         }
       },
+    );
+  }
+
+  Widget _symptomList(
+      BuildContext context, List<Symptom> fetchList, int group) {
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: List.generate(
+          fetchList[group].subSymptoms.length,
+          (index) => DetailsSymptomListItem(
+            fetchList: fetchList,
+            group: group,
+            item: index,
+            onTap: () => Provider.of<Symptoms>(context, listen: false)
+                .addSymtomp(group, index),
+          ),
+        ),
+      ),
     );
   }
 }
