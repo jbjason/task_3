@@ -40,6 +40,7 @@ class Symptoms with ChangeNotifier {
       if (response.statusCode == 200) {
         final fetchData = json.decode(response.body);
         final list = fetchData['data']!['symptoms'] as List;
+        _symptomsList.clear();
         for (int i = 0; i < list.length; i++) {
           _symptomsList.add(Symptom.fromMap(list[i]));
         }
